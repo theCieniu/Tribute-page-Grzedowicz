@@ -1,8 +1,127 @@
-﻿nav {
-  background-color: black;
-  color: white;
+/* ========= Free code camp user story ======
+User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+User Story #9: The img element should be centered within its parent element.
+*/
+
+/*======== GENERAL STYLES ========*/
+body {
+  /* ========= COLOR SCHEME ======*/
+  --darkaccent:#2e263b;
+  --lightaccent:#c3c0c7;
+  --neutral:#383838;
+  /* ========= COLOR SCHEME ======*/
+  margin:0px;
+  padding:0px;
+  color:var(--neutral);
 }
 
-a nav {
+img {
+  max-width: 100%;
+  margin:0px;
+}
+
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* =========== LINKS ==========*/
+a:link {
+  text-decoration: none;
   color:white;
+}
+
+a:visited {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color:var(--lightaccent);
+  }
+
+a:active {
+  text-decoration: underline;
+  background-color:white;
+  color:var(--darkaccent);
+}
+
+
+/* ========= NAVIGATION BAR ======*/
+nav {
+  background-color: black;
+  color: white;
+  margin:0px;
+  padding:7px;
+}
+
+nav ol {
+  list-style-type: none;
+  display:flex;
+}
+
+/* ========= RAVEN BANNER ======*/
+img #raven {
+  display: block;
+  margin:0;
+  max-widith:100%s;
+
+}
+s
+
+/* ========= INTRO - profile & blocquote ======*/
+#intro {
+  display:flex;
+}
+
+
+
+#background-item {
+  background-color: var(--lightaccent);
+  widith:50%;
+  height:50%;
+}
+
+/* ========= BOOK COVERS ======*/
+#book-covers {
+  display:flex;
+}
+
+/* ========= TABLE ======*/
+table {
+  display: table;
+  border-collapse: collapse;
+  border: 2px dotted white;
+  background-color: var(--lightaccent);
+}
+
+th {
+  border: 2px solid white;
+  padding: 10px;
+}
+
+td {
+  border: 2px solid white;
+  padding: 5px;
+}
+
+/* ========= FOOTER ======*/
+footer {
+  background-color: black;
+  color: white;
+  margin-bottom: 0px;
+  border:none;
+  margin-top: 10%;
+}
+
+footer p {
+  padding:10px;
+  text-align: center;
+
+}
+
+.goodreads  {
+  background-color: black;
+  color: white;
 }
