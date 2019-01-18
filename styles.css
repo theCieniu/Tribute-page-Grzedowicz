@@ -15,7 +15,7 @@ User Story #9: The img element should be centered within its parent element.
   box-sizing: border-box;
   color:var(--neutral);
   font-family: 'Aleo', serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 main {
@@ -58,6 +58,15 @@ nav {
 nav ol {
   list-style-type: none;
   display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 10rem;
+  margin-right: 10rem;
+
+}
+
+nav li {
+  color:white;
 }
 
 /* ========= RAVEN BANNER ======*/
@@ -77,11 +86,15 @@ nav ol {
   padding:0;
   width:100vw;
   max-width:1700px;
+  margin-bottom:4rem;
 }
 
 #eye {
   display: block;
   box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  top:3.7rem;
   margin:0;
   padding:0;
   width:100vw;
@@ -90,54 +103,79 @@ nav ol {
 
 hgroup {
   font-family: 'Cherry Swash', 'Aleo' sans-serif;
-}
+  position:absolute;
+  top:14rem;
+  left:5rem;
+  }
 
 #title {
-  font-size: 4rem;
+  color:white;
+  font-size: 3rem;
 }
 #subtitle {
-  font-size: 2.1rem;
+  color:white;
+  font-size: 1.4rem;
 }
 
 
 /* ========= MAIN PARAGRAPH ======*/
-h2 {
+main h2 {
   font-family: 'Cherry Swash', 'Aleo' sans-serif;
-  font-size: 3rem;
-}
-
-h3 {font-family: 'Cherry Swash', 'Aleo' sans-serif;
-font-size: 1.8rem;
-
+  font-size: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
 }
 
 main li {
   margin-left: 1.5em;
 }
 
+main p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 /* ========= INTRO - profile & blocquote ======*/
 #intro {
   display:flex;
+  justify-content:space-between;
 }
+
+.quote {
+  font-style: italic;
+  }
 
 #image {
   display:block;
   box-sizing: border-box;
-  max-width:50vw;
+  max-width:35vw;
+  margin-right: 5rem;
   padding:0;
-  max
+}
+
+#img-caption {
+  margin-left: 2em;
+  align-self: center;
+
 }
 
 blockquote {
   font-family: Aleo, serif;
+  }
+
+#quotesource {
+  font-weight: 700;
   font-style: italic;
+  text-align: right;
 }
+
 
 #background-item {
   background-color: var(--lightaccent);
   width:50vw;
   height:50vw;
+  position:absolute;
+  z-index:-1;
 }
 
 
@@ -148,8 +186,13 @@ blockquote {
 #book-covers {
   display:flex;
   box-sizing: border-box;
-  max-width: 90vw;
-}
+  justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  padding:20px;
+  max-widith:1000px;
+  }
 
 /* ========= TABLE ======*/
 table {
@@ -179,8 +222,10 @@ footer {
   margin: 0px;
   margin-top: 10vh;
   width: 100vw;
-  padding:10px;
+  padding:0.8rem;
   text-align: center;
+  position:relative;
+  z-index: 1;
   }
 
 #galaxy {
@@ -190,10 +235,42 @@ footer {
   padding:0;
   width:100vw;
   max-width:1700px;
-}
+  }
 
 .goodreads  {
-  background-color: black;
   color: white;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+  position:absolute;
+  bottom:6rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index:111;
+  }
+
+#tribute-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#goodreadslogo {
+  height: 2.2rem;
+  max-height: 100px;
+}
+
+
+footer p {
+  font-size: 0.8rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
+  color:var(--lightaccent);
+  }
+
+footer p a {
+  font-size: 0.8rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
+  color:white;
 }
