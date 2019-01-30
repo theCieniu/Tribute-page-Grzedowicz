@@ -2,112 +2,100 @@
 User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
 User Story #9: The img element should be centered within its parent element.
 */
-
 /*======== GENERAL STYLES ========*/
 * {
   /* ========= COLOR SCHEME ======*/
-  --darkaccent:#2e263b;
-  --lightaccent:#c3c0c7;
-  --neutral:#383838;
+  --darkaccent: #2e263b;
+  --lightaccent: #c3c0c7;
+  --neutral: #383838;
   /* ========= =========== ======*/
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-  color:var(--neutral);
+}
+
+body {
+  color: var(--neutral);
   font-family: 'Aleo', serif;
   font-size: 1.1rem;
 }
 
 /* =========== LINKS ==========*/
-a:link {
+a:link, a:visited {
   text-decoration: none;
-  color:white;
-}
-
-a:visited {
-  text-decoration: none;
-  color:white;
+  color: white;
 }
 
 a:hover {
   text-decoration: underline;
-  color:var(--lightaccent);
-  }
-
-/* ========= NAVIGATION BAR ======*/
-nav {
-  font-family: 'Cherry Swash', 'Aleo' sans-serif;
-  background-color: black;
-  color: white;
-  margin:0px;
-  padding:1em;
-      }
-
-nav ol {
-  list-style-type: none;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-left: 10rem;
-  margin-right: 10rem;
-
-}
-
-nav li {
-  color:white;
-}
-
-i {
-  color:white;
-}
-
-i:hover {
   color: var(--lightaccent);
 }
 
-nav a:active {
+a:active {
   text-decoration: underline;
-  background-color:white;
-  color:var(--darkaccent);
+  background-color: white;
+  color: var(--darkaccent);
+}
+
+/* ========= NAVIGATION BAR ======*/
+nav {
+  font-family: 'Cherry Swash', 'Aleo', sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 1em;
+}
+
+nav ol {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
 /* ========= RAVEN BANNER ======*/
-
 .banner {
   display: block;
   box-sizing: border-box;
-  margin:0;
-  width:100vw;
+  margin: 0;
+  width: 100vw;
   max-width: 1700px;
   border: none;
-  }
+}
 
 #raven {
   display: block;
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   border: 0;
-  width:100vw;
-  max-width:1700px;
-  margin-bottom:4rem;
-  z-index:0;
-  }
+  width: 100vw;
+  max-width: 1700px;
+  margin-bottom: 4rem;
+  z-index: 0;
+}
 
 @keyframes blink {
   0% {
-    visibility:hidden;
+    visibility: hidden;
   }
+
   20% {
     visibility: visible;
-      }
+  }
+
   23% {
-    visibility:hidden;
+    visibility: hidden;
   }
+
   100% {
-    visibility:hidden;
+    visibility: hidden;
   }
-  }
+}
 
 #eye {
   animation-name: blink;
@@ -118,49 +106,44 @@ nav a:active {
   box-sizing: border-box;
   position: absolute;
   z-index: 10;
-  top:3.7rem;
-  margin:0;
-  padding:0;
-  width:100vw;
-  max-width:1700px;
+  top: 3.7rem;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 1700px;
   visibility: hidden;
-  animation-timing-function: cubic-bezier(.5,.5,.6,.9);
+  animation-timing-function: cubic-bezier(.5, .5, .6, .9);
 }
 
 hgroup {
-  font-family: 'Cherry Swash', 'Aleo' sans-serif;
-  position:absolute;
-  top:14rem;
-  left:5rem;
-  }
+  font-family: 'Cherry Swash', 'Aleo', sans-serif;
+  position: absolute;
+  top: 14rem;
+  left: 5rem;
+  color: white;
+}
 
 #title {
-  color:white;
   font-size: 3rem;
 }
+
 #subtitle {
-  color:white;
   font-size: 1.4rem;
 }
 
-
-
 /* ========= INTRO - profile & blocquote ======*/
 #intro {
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 8vw;
   margin-right: 8vw;
 }
 
-.quote {
-  font-style: italic;
-  }
-
 #image {
-  display:block;
+  display: block;
   box-sizing: border-box;
-  max-width:35vw;
+  max-width: 35vw;
   align-self: center;
   justify-content: center;
   box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.20);
@@ -170,86 +153,86 @@ hgroup {
   margin-left: .5em;
   align-self: center;
   color: white;
-  padding:0.5em;
+  padding: 0.5em;
   text-shadow: .08em .05em .2em var(--darkaccent);
   font-size: 1.3rem;
-  }
+}
 
 .quote {
-  margin-left:5vw;
+  margin-left: 5vw;
+  padding: 1em;
+  font-style: italic;
 }
 
 blockquote {
-  font-family: Aleo, serif;
-  }
+  font-family: 'Aleo', serif;
+  display: block;
+  padding: 1em;
+  align-self: center;
+  margin-top: 3em;
+}
 
 cite {
   font-weight: 700;
-  display:block;
+  display: block;
   text-align: right;
-  padding:1em;
   z-index: 3;
-  }
+  padding: 1em;
+}
 
 .quote-pl {
-  display:block;
-  position:relative;
+  position: relative;
   align-self: center;
   justify-content: center;
-  padding:1em;
-    }
+  z-index: 1;
+}
 
 .quote-en {
-  display:block;
-  background-color:var(--darkaccent);
+  background-color: var(--darkaccent);
   color: white;
-  position:absolute;
-  z-index:2;
-  opacity:0;
-  padding:1em;
-  transform: translateY(-11em);
-  margin-left:-1em;
-  margin-right:2em;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  padding: 1em;
+  transform: translateY(-10em);
+  right: 15vw;
+  width: 40vw;
 }
 
 .quote-en:hover {
-  opacity:1;
+  opacity: 1;
 }
-
 
 #background-item {
   background-color: var(--lightaccent);
-  width:80vw;
-  height:50vw;
-  position:absolute;
-  left:-48vw;
+  width: 80vw;
+  height: 50vw;
+  position: absolute;
+  left: -48vw;
   transform: rotate(-20deg) skewX(45deg);
-  z-index:-2;
+  z-index: -2;
+  overflow: hidden;
 }
 
-
 /* ========= MAIN PARAGRAPH ======*/
-
-
-
 main h2 {
-  font-family: 'Cherry Swash', 'Aleo' sans-serif;
-  font-size: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 0.5rem;
+  font-family: 'Cherry Swash', 'Aleo', sans-serif;
+  font-size: 2em;
+  padding-top: 4em;
+  padding-bottom: 0.5em;
   margin-left: 10vw;
   margin-right: 10vw;
 }
 
 main li {
-  margin-left:12vw;
+  margin-left: 12vw;
   padding-left: 1em;
   line-height: 2em;
   list-style: none;
-      }
+}
 
 main li:before {
-  content:'\2605';
+  content: '\2605';
   padding-right: 1em;
 }
 
@@ -257,68 +240,63 @@ main p {
   margin-left: 10vw;
   margin-right: 10vw;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1em;
   line-height: 1.8em;
 }
 
-
 /* ========= BOOK COVERS ====== */
-
 .book-covers {
-   display: flex;
-   margin:5vw;
-   justify-content: space-around;
-   margin-top:0;
-   margin-bottom:5rem;
-   text-align: center;
-   max-width: 90vw;
-    }
+  display: flex;
+  margin: 5vw;
+  justify-content: space-around;
+  margin-top: 0;
+  margin-bottom: 5em;
+  text-align: center;
+  max-width: 90vw;
+}
 
 .bookcover img {
   box-shadow: 10px 10px rgba(0, 0, 0, 0.20);
   position: relative;
   max-width: 22vw;
-    }
+}
 
 .booktitle {
-    position: relative;
-    font-weight: bold;
-    background-color: var(--darkaccent);
-    color: var(--lightaccent);
-    z-index: 9;
-    top: 5em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.20);
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.20);
-    opacity:0;
-  }
+  position: relative;
+  font-weight: bold;
+  background-color: var(--darkaccent);
+  color: var(--lightaccent);
+  z-index: 9;
+  top: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.20);
+  opacity: 0;
+}
 
 .bookcover:hover .booktitle {
-    opacity: 1;
-  }
+  opacity: 1;
+}
 
 /* ========= TABLE ======*/
 .table {
   background-color: var(--lightaccent);
-  font-size: 1rem;
-  width: 100vw
-  padding: 1rem;
-  padding-left: 8vw;
-  padding-right: 8vw;
-  padding-bottom:3em;
+  font-size: 1em;
+  width: 100vw;
+  padding: 1em 8vw 3em;
 }
 
 table {
   display: table;
   border-collapse: collapse;
   border: 2px dotted white;
-  }
+}
 
 caption {
-    padding: .8em;
-    padding-top:2em;
-  }
+  padding: .8em;
+  padding-top: 2em;
+}
 
 th {
   border: 2px solid white;
@@ -332,65 +310,74 @@ td {
 }
 
 /* ========= ARROW ==============*/
-
 .arrow {
   position: fixed;
-  font-size: 2rem;
-  width: 3rem;
-  height: 3rem;
+  font-size: 2.5em;
+  width: 1.3em;
+  height: 1.3em;
   color: white;
   background-color: var(--darkaccent);
-  bottom: .5rem;
-  right: .5rem;
+  bottom: .5em;
+  right: .5em;
   z-index: 999;
+  display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   box-shadow: .1em .1em .3em rgba(0, 0, 0, .5);
   animation-name: arrow;
   animation-duration: 8s;
   animation-iteration-count: 1;
-
 }
 
 @keyframes arrow {
-  0% {opacity:0}
-  25% {opacity:0}
-  50% {opacity:1}
-  100% {opacity:1}
+  0% {
+    opacity: 0
+  }
+
+  25% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
 }
 
-
 /* ========= GALAXY GOODREADS ======*/
-
 #galaxy {
   display: block;
   box-sizing: border-box;
-  margin:0;
-  padding:0;
-  padding-top:3rem;
+  margin: 0;
+  padding: 0;
+  padding-top: 3rem;
   border: 0;
-  width:100vw;
-  max-width:1700px;
-  justify:center;
+  width: 100vw;
+  max-width: 1700px;
+  justify: center;
   position: relative;
   z-index: 0;
-  }
+}
 
-.goodreads  {
+.goodreads {
   color: white;
-  font-size: 2.5rem;
-  position:relative;
+  position: relative;
   top: 12rem;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  z-index:111;
-    }
+  z-index: 111;
+}
 
-  .goodreads p, a {
-    color: white;
-  }
+.goodreads p, a {
+  color: white;
+  font-size: 1.5em;
+}
 
 #tribute-link {
   display: flex;
@@ -406,23 +393,155 @@ td {
 }
 
 /* ========= FOOTER =========*/
-
 footer {
-  font-family: 'Cherry Swash', 'Aleo' sans-serif;
+  font-family: 'Cherry Swash', 'Aleo', sans-serif;
   background-color: black;
   color: white;
   box-sizing: border-box;
   margin: 0px;
   width: 100vw;
-  padding:0.8rem;
-  border:0;
+  padding: 0.8rem;
+  border: 0;
   text-align: center;
-  position:relative;
+  position: relative;
   z-index: 1;
   box-shadow: 0 -1em 2em black;
-  }
+}
 
 footer p, a {
-  color:white;
+  color: white;
   font-size: 0.8rem;
+}
+
+/* ======== MEDIA QUERY ==========*/
+@media (max-width:800px) {
+  * {
+    font-size: 0.8rem;
   }
+
+  hgroup {
+    font-family: 'Cherry Swash', 'Aleo', sans-serif;
+    position: none;
+    background-color: black;
+    margin-left: -3em;
+  }
+
+  #title {
+    font-size: 2em;
+  }
+
+  #subtitle {
+    font-size: 0.85em;
+  }
+
+  #intro {
+    flex-direction: column-reverse;
+  }
+
+  #image {
+    max-width: 80vw;
+  }
+
+  #img-caption {
+    display: none;
+  }
+
+  .quote {
+    margin-left: 1vw;
+  }
+
+  .quote-en {
+    width: 75vw;
+    animation-name: citemobile;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes citemobile {
+    0% {
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .quote-en:hover {
+    opacity: 1;
+  }
+
+  #background-item {
+    position: absolute;
+    width: 100vw;
+    height: 200vw;
+    left: -70vw;
+    transform: rotate(-20deg) skewX(45deg) translateX(50vw);
+    overflow: hidden;
+  }
+
+  main h2 {
+    padding-top: 2em;
+  }
+
+  main p {
+    margin-left: 7vw;
+    padding-top: 0em;
+  }
+
+  .book-covers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 95vw;
+  }
+
+  .bookcover img {
+    max-width: 45vw;
+  }
+
+  table {
+    max-width: 100vw;
+    margin-left: -1em;
+  }
+
+  caption {
+    padding-top: 1em;
+  }
+
+  td {
+    font-size: 1em;
+  }
+
+  #galaxy {
+    padding-top: 3em;
+    position: relative;
+  }
+
+  .goodreads {
+    transform: translateY(-6em);
+  }
+
+  .goodreads p, a {
+    font-size: 1em;
+  }
+
+  footer p, a {
+    font-size: 1em;
+  }
+
+  .arrow {
+    font-size: 1.2em;
+    width: 2.5em;
+    height: 2.5em;
+    bottom: 3em;
+  }
+}
