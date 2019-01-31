@@ -3,6 +3,10 @@ User Story #8: The img element should responsively resize, relative to the width
 User Story #9: The img element should be centered within its parent element.
 */
 /*======== GENERAL STYLES ========*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 * {
   /* ========= COLOR SCHEME ======*/
   --darkaccent: #2e263b;
@@ -11,7 +15,6 @@ User Story #9: The img element should be centered within its parent element.
   /* ========= =========== ======*/
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 body {
@@ -38,6 +41,10 @@ a:active {
 }
 
 /* ========= NAVIGATION BAR ======*/
+input.hamburger, label.hamburger {
+  display: none;
+}
+
 nav {
   font-family: 'Cherry Swash', 'Aleo', sans-serif;
   background-color: black;
@@ -55,6 +62,12 @@ nav ol {
   justify-content: space-around;
   margin-left: 10rem;
   margin-right: 10rem;
+}
+
+nav li::before {
+  content: '\2605';
+  padding-right: 0.7em;
+  padding-right: 1em;
 }
 
 /* ========= RAVEN BANNER ======*/
@@ -419,6 +432,98 @@ footer p, a {
     font-size: 0.8rem;
   }
 
+  /* ======== NAVIGATION button =====*/
+  input.hamburger {
+    display: none;
+  }
+
+  label.hamburger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 88;
+    width: 100vw;
+    height: 3rem;
+    margin: 0;
+    background-color: var(--darkaccent);
+    font-family: 'Cherry Swash', 'Aleo', sans-serif;
+    color: white;
+    box-shadow: -1em 0.5em 1em rgba(0, 0, 0, .3);
+    ;
+  }
+
+  span.hamburger, h3.hamburger {
+    font-size: 1rem;
+  }
+
+  /* ======== NAVIGATION =====*/
+  nav {
+    position: fixed;
+    z-index: 99;
+    background-color: var(--darkaccent);
+    left: 0;
+    top: 3rem;
+    opacity: 0;
+    box-shadow: -1em 0.5em 1em rgba(0, 0, 0, .3);
+    width: 50vw;
+  }
+
+  nav li::before {
+    content: '';
+  }
+
+  nav ol {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 2em;
+  }
+
+  nav li {
+    font-size: 1rem;
+    padding-bottom: 0.4em;
+  }
+
+  /* ======== RAVEN BANNER =====*/
+  .banner {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #raven {
+    margin: 0;
+    position: relative;
+    top: 2rem;
+  }
+
+  #eye {
+    top: 2rem;
+  }
+
+  hgroup {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    left: 3em;
+    box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.7),
+      0 .5rem 1rem rgba(0, 0, 0, 0.3);
+  }
+
+  main {
+    margin-top: 6rem;
+  }
+
+  input#hamburger-switch:checked~nav {
+    opacity: 1;
+  }
+
+  /* ===================== */
   hgroup {
     font-family: 'Cherry Swash', 'Aleo', sans-serif;
     position: none;
@@ -480,15 +585,6 @@ footer p, a {
     opacity: 1;
   }
 
-  #background-item {
-    position: absolute;
-    width: 100vw;
-    height: 200vw;
-    left: -70vw;
-    transform: rotate(-20deg) skewX(45deg) translateX(50vw);
-    overflow: hidden;
-  }
-
   main h2 {
     padding-top: 2em;
   }
@@ -505,7 +601,7 @@ footer p, a {
   }
 
   .bookcover img {
-    max-width: 45vw;
+    max-width: 35vw;
   }
 
   table {
@@ -519,6 +615,10 @@ footer p, a {
 
   td {
     font-size: 1em;
+  }
+
+  main li {
+    margin-left: 0.8em;
   }
 
   #galaxy {
@@ -539,9 +639,19 @@ footer p, a {
   }
 
   .arrow {
-    font-size: 1.2em;
-    width: 2.5em;
-    height: 2.5em;
-    bottom: 3em;
+    display: none;
+  }
+
+  /* ======== ======= =====*/
+  #background-item {
+    background-color: var(--lightaccent);
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    left: 0;
+    top: 70vh;
+    transform: rotate(90deg) skewX(-30deg);
+    z-index: -2;
+    overflow: hidden;
   }
 }
