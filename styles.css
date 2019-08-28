@@ -21,6 +21,7 @@ body {
   color: var(--neutral);
   font-family: 'Aleo', serif;
   font-size: 1.1rem;
+  overflow-x: hidden;
 }
 
 /* =========== LINKS ==========*/
