@@ -1,0 +1,70 @@
+input.hamburger,
+label.hamburger {
+  display: none;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Cherry Swash", "Aleo", sans-serif;
+}
+
+nav {
+  width: 100%;
+  ul {
+    @include flex(row, space-around, center);
+  }
+  li {
+    margin: 1rem;
+    &::before {
+      content: "\2605";
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  @include flex(column, center, flex-start);
+  height: 41vw;
+  img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  #raven {
+    z-index: 2;
+  }
+  #eye {
+    z-index: 3;
+    animation: blink 5s cubic-bezier(0.5, 0.5, 0.6, 0.9) infinite;
+  }
+  hgroup {
+    z-index: 4;
+    margin: 5vw;
+    max-width: 80vw;
+    h1 {
+      font-size: calc(3rem + 1vw);
+      letter-spacing: 0.25rem;
+    }
+    h2 {
+      font-size: calc(1.5rem + 0.6vw);
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    visibility: hidden;
+  }
+  20% {
+    visibility: visible;
+  }
+  23% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
