@@ -4,32 +4,6 @@
     font-size: 0.8rem;
   }
 
-  /* ======== NAVIGATION button =====*/
-  input.hamburger {
-    display: none;
-  }
-
-  label.hamburger {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    z-index: 88;
-    width: 100vw;
-    height: 3rem;
-    margin: 0;
-    background-color: var(--darkaccent);
-    font-family: "Cherry Swash", "Aleo", sans-serif;
-    color: white;
-    box-shadow: -1em 0.5em 1em rgba(0, 0, 0, 0.3);
-  }
-
-  span.hamburger,
-  h3.hamburger {
-    font-size: 1rem;
-  }
-
   /* ======== NAVIGATION =====*/
   nav {
     position: fixed;

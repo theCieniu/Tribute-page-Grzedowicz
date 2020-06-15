@@ -3,13 +3,15 @@
   @include flex(row, space-between, center);
   margin: 5rem auto;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .bookcover {
   position: relative;
+  flex: 1 1 10rem;
+  margin: 2rem auto;
   img {
     box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-    max-width: 17vw;
   }
 }
 
