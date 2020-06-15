@@ -1,0 +1,76 @@
+/* ========= Free code camp user story ======
+User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+User Story #9: The img element should be centered within its parent element.
+*/
+
+$darkaccent: #2e263b;
+$lightaccent: #c3c0c7;
+$neutral: #383838;
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  color: $neutral;
+  font-family: "Aleo", serif;
+  font-size: calc(1rem + 0.5vw);
+  overflow-x: hidden;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $lightaccent;
+}
+
+a:active {
+  text-decoration: underline;
+  background-color: white;
+  color: $darkaccent;
+}
+
+ul {
+  list-style: none;
+}
+
+main li:before {
+  content: "\2605";
+  padding-right: 1em;
+}
+
+h2 {
+  font-family: "Cherry Swash", "Aleo", sans-serif;
+}
+
+section {
+  padding: 5rem 10vw;
+  p {
+    line-height: 2em;
+  }
+  h2 {
+    margin: 2em 0 2rem;
+    font-size: calc(2rem + 1vw);
+  }
+}
+
+@import "header";
+@import "intro";
+@import "main";
+@import "footer";
+@import "responsive";

@@ -1,0 +1,75 @@
+/* ===== INTRO WITH CITATION ======= */
+#intro {
+  position: relative;
+  @include flex(row, space-between, center);
+}
+
+#image {
+  width: 100%;
+  box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#img-caption {
+  text-align: center;
+  color: white;
+  text-shadow: 0.08em 0.05em 0.2em $darkaccent;
+}
+
+#img-div {
+  margin-right: 5vw;
+}
+
+#img-div,
+#quote-box {
+  flex: 1 1 40rem;
+}
+
+#quote-description {
+  @include flex(column, center, flex-end);
+  flex-wrap: wrap;
+}
+
+#quotesource {
+  text-align: right;
+  font-weight: bold;
+  margin: 1rem 2rem;
+}
+
+#quote-toggle {
+  margin: 1rem 2rem 0.5rem;
+  cursor: pointer;
+  background-color: $darkaccent;
+  color: white;
+  border-radius: 2rem;
+  @include flex(row, space-between, center);
+  position: relative;
+  span {
+    margin: 0.5rem 1rem;
+  }
+}
+
+#toggle-button {
+  position: absolute;
+  width: 50%;
+  border: solid 0.25rem $lightaccent;
+  height: 2.2rem;
+  border-radius: 2rem;
+  z-index: 5;
+  margin: 0 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-change {
+  transform: translateX(95%);
+}
+
+#background-item {
+  position: absolute;
+  width: 80vw;
+  height: 50vw;
+  left: -55vw;
+  top: 15%;
+  background-color: $lightaccent;
+  transform: rotate(-20deg) skewX(45deg);
+  z-index: -2;
+}
