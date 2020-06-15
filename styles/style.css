@@ -614,6 +614,9 @@ footer i {
   #hamburger-switch:checked ~ nav#navigation {
     opacity: 1;
   }
+  .mobileMenuVisible {
+    opacity: 1;
+  }
   /* ====================== */
   hgroup h1 {
     font-size: calc(1rem + 1vw);

@@ -1,14 +1,6 @@
 const quoteToggle = document.getElementById("quote-toggle");
-console.log(quoteToggle);
 const buttonToggle = document.getElementById("toggle-button");
 const blockquote = document.getElementById("quote");
-
-/*
-let englishQuote = document.createElement("blockquote");
-let enP1 = document.createElement("p")
-enP1.createTextNode()
-let polishQuote = "";
-*/
 
 quoteToggle.addEventListener("click", () => {
   buttonToggle.classList.toggle("toggle-change");
@@ -20,3 +12,14 @@ quoteToggle.addEventListener("click", () => {
       '<blocquote class="quote-pl" lang="pl"><p>Na belce pod sufitem siedzi ogromny, czarny ptak podobny do kruka i błyska na mnie białą powieką na czarnym jak agat oku.</p><p>– Nazywasz się Nevermore – mówię mu. – I zostajesz ze mną.</p><p>– Nevermore! – Kracze. Nigdy już!</p><p>– Nareszcie to powiedziałeś. – Przytakuję z satysfakcją.</p></blocquote>';
   }
 });
+
+let navMenu = document.getElementById("navigation");
+let mobileBtn = document.getElementById("mobile-menu-button");
+
+mobileBtn.addEventListener("click", () =>
+  navMenu.classList.toggle("mobileMenuVisible")
+);
+
+navMenu.addEventListener("click", () =>
+  navMenu.classList.remove("mobileMenuVisible")
+);
