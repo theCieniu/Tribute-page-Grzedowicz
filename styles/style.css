@@ -198,10 +198,12 @@ nav li::before {
           align-items: center;
 }
 
-#image {
+img#image {
   width: 100%;
+  max-width: 1200px;
   -webkit-box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.3);
           box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.3);
+  display: block;
 }
 
 #img-caption {
